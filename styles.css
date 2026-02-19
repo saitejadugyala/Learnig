@@ -1,0 +1,137 @@
+/* *{
+    margin: 0;
+    padding:0;
+    background-color: #689a9e77;
+}
+.abc{
+    font-size: auto;
+    font-family: "Times New Roman";
+    font-weight: 100;
+    text-align: left;
+    color: rgba(201, 251, 100, 0.559);
+}
+h1{
+    color:aliceblue
+} */
+/* * {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(72, 72, 121);
+}
+
+#box {
+    background-color: aqua;
+    text-align: left;
+    color: #ddf58f;
+    font-family: "Times New Roman";
+}
+
+.heading {
+    background-color: #689a9e77;
+    text-align: left;
+    color: red;
+    font-family: "Times New Roman";
+}
+#button1:hover{
+    background-color: chocolate;
+    color:white;
+    border:2px dotted rgb(238, 171, 14);
+    padding: 20px;
+    margin: 30;
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.btn {
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  border: 0.5px solid black;
+    border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: green;
+} */
+body{
+    background-color: #f4f6f8;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+    background-color: rgb(151, 235, 228);
+}
+th, td{
+    border: 1px solid #ddd;
+    padding: 12px;
+    margin: 8px;
+    text-align: center;
+}
+/*adding table header color*/
+thead{
+    background-color: #007bff;
+    color:whitesmoke;
+}
+/*adding alternate row color*/
+tbody tr:nth-child(odd){
+    background-color: #d1e4e6;
+}
+/*hover effect implementaion*/
+tbody tr:hover{
+    background-color: pink;
+    
+}
+/* for the form*/
+.form_container{
+    background-color: #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    height: auto;
+    margin: auto;
+}
+.form_container h2{
+    text-align: center;
+    color: #0b26ed94;
+    margin-bottom: 20px;
+}
+label{
+    display:block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 400;
+}
+input,select{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+input:focus-visible, select:focus-visible{
+    border-color: #7509da;
+    outline: none;
+}
+button{
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #c553d2;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #bab525;
+}
