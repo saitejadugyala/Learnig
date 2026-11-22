@@ -1,158 +1,197 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-    <style>
-        table, th,td{
-            border: 1px solid black;
-            text-align: center;
-            border-collapse: collapse;
-        }
-    </style>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creating a form</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Minimal Notepad styling additions */
+    #notepad {
+      margin-top: 40px;
+      border: 1px solid #ccc;
+      padding: 15px;
+      border-radius: 5px;
+      max-width: 600px;
+    }
+
+    #notepad h2 {
+      margin-bottom: 10px;
+    }
+
+    #note-text {
+      width: 100%;
+      height: 150px;
+      resize: vertical;
+      padding: 8px;
+      font-family: sans-serif;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+
+    #notes-list {
+      margin-top: 10px;
+      max-height: 150px;
+      overflow-y: auto;
+      border: 1px solid #ddd;
+      padding: 5px;
+      list-style-type: none;
+      font-family: sans-serif;
+      font-size: 14px;
+    }
+
+    #notes-list li {
+      cursor: pointer;
+      padding: 4px;
+      border-bottom: 1px solid #eee;
+    }
+
+    #notes-list li:hover {
+      background-color: #f0f0f0;
+    }
+
+    #buttons {
+      margin-top: 10px;
+    }
+
+    #buttons button {
+      margin-right: 8px;
+      padding: 6px 12px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-    <h1>Nature image</h1>
-    <figure>  <img src="https://t4.ftcdn.net/jpg/05/27/33/71/240_F_527337139_hGaAjvS5gWMuafyf0kk2wnK9qP0JHvwh.jpg" alt="Autumn Waterfall">
-        <figcaption><a href="https://t4.ftcdn.net/jpg/05/27/33/71/240_F_527337139_hGaAjvS5gWMuafyf0kk2wnK9qP0JHvwh.jpg" target="_blank">Autumn Waterfall</a></figcaption>
-</figure>
-<figure>
-    <iframe width="560" height="315"
-        src="https://www.youtube.com/embed/kt0FrkQgw8w?si=7CAl2164tL_SNNy1"
-        title="YouTube video player"
-        style="border:0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
-    </iframe>
-    <figcaption><a href="https://www.youtube.com/watch?v=kt0FrkQgw8w" target="_blank">3D Portfolio (YouTube)</a></figcaption>
-</figure>
-
-<table width="100%">
+  <table>
     <thead>
-        <tr>
-            <th colspan="2">Student Name</th>
-            <th>Roll No</th>
-            <th>Subject</th>
-            <th>Marks</th>
-        </tr>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Job</th>
+        <th>Company Name</th>
+      </tr>
     </thead>
-
     <tbody>
-        <tr>
-            <td colspan="2">Sai Teja</td>
-            <td>12345</td>
-            <td>Math</td>
-            <td>95</td>
-        </tr>
-        <tr>
-            <td colspan="2">Sai</td>
-            <td>12346</td>
-            <td>Science</td>
-            <td>88</td>
-        </tr>
+      <tr>
+        <td>saiteja</td>
+        <td>saitejaraodugyala@gmail.com</td>
+        <td>Software Engineer</td>
+        <td>TCS</td>
+      </tr>
+      <tr>
+        <td>John Doe</td>
+        <td>johndoe@example.com</td>
+        <td>Web Developer</td>
+        <td>ABC Corp</td>
+      </tr>
+      <tr>
+        <td>Jane Smith</td>
+        <td>janesmith@example.com</td>
+        <td>Graphic Designer</td>
+        <td>XYZ Inc</td>
+      </tr>
     </tbody>
-</table>
+  </table>
+  <br>
+  <div class="form_container">
+    <h2>sample form</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required><br><br>
 
-</html> -->
- <!-- DAy 2 for learning -->
-  <!-- <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS styling</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <div id="box">
-        <p>
-          This is a practice paragraph written to help learn HTML and CSS. It contains five concise sentences that demonstrate basic sentence structure. Using paragraphs allows content to be grouped and styled easily. Experimenting with different text helps you understand typography and layout. Save and refresh the page to see your changes immediately.
-        </p>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="job">Job:</label>
+      <input type="text" id="job" name="job"><br><br>
+
+      <label for="company">Company Name:</label>
+      <input type="text" id="company" name="company"><br><br>
+      <label for="skills">Skills:</label>
+      <select>
+        <option value="">Select your skills</option>
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="javascript">JavaScript</option>
+        <option value="python">Python</option>
+      </select><br><br>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <div id="notepad">
+    <h2>Notepad</h2>
+    <textarea id="note-text" placeholder="Write your note here..."></textarea>
+    <div id="buttons">
+      <button id="new-note-btn">New Note</button>
+      <button id="save-note-btn">Save Note</button>
+      <button id="clear-note-btn">Clear Note</button>
     </div>
-    <div class="heading">
-        <h1>Heading 1</h1>
-        <h2>Heading 2</h2>
-        <h3>Heading 3</h3>
-    </div>
-    <a href="https://www.google.com">
-    <button id="button1">clickme</button>
-    </a>
-    <button class="btn">try it</button>
-    <div class="outer">
-        <div class="inner">
+    <ul id="notes-list" title="Click a note to edit"></ul>
+  </div>
 
-        </div>
-    </div> -->
-  <!-- </body>
-  </html> --> 
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creating a form</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <table>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Job</th>
-                <th>Company Name</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>saiteja</td>
-                <td>saitejaraodugyala@gmail.com</td>
-                <td>Software Engineer</td>
-                <td>TCS</td>
-            </tr>
-            <tr>
-                <td>John Doe</td>
-                <td>johndoe@example.com</td>
-                <td>Web Developer</td>
-                <td>ABC Corp</td>
-            </tr>
-            <tr>
-                <td>Jane Smith</td>
-                <td>janesmith@example.com</td>
-                <td>Graphic Designer</td>
-                <td>XYZ Inc</td>
-            </tr>
-        </tbody>
-    </table>
-    <br>
-    <div class="form_container">
-        <h2>sample form</h2>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br><br>
+  <script>
+    // In-memory Notes storage
+    const notes = [];
+    let selectedNoteIndex = null;
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br><br>
+    function renderNotepadUI() {
+      const notesListElem = document.getElementById('notes-list');
+      notesListElem.innerHTML = '';
+      notes.forEach((note, index) => {
+        const li = document.createElement('li');
+        li.textContent = note.substring(0, 30) + (note.length > 30 ? '...' : '');
+        li.dataset.index = index;
+        li.title = note;
+        li.addEventListener('click', () => handleNoteEditing(index));
+        notesListElem.appendChild(li);
+      });
+    }
 
-            <label for="job">Job:</label>
-            <input type="text" id="job" name="job"><br><br>
+    function handleNewNoteCreation() {
+      const noteTextElem = document.getElementById('note-text');
+      noteTextElem.value = '';
+      selectedNoteIndex = null;
+      noteTextElem.focus();
+    }
 
-            <label for="company">Company Name:</label>
-            <input type="text" id="company" name="company"><br><br>
-            <label for="skills">Skills:</label>
-            <select>
-                <option value="">Select your skills</option>
-                <option value="html">HTML</option>
-                <option value="css">CSS</option>
-                <option value="javascript">JavaScript</option>
-                <option value="python">Python</option>
-            </select><br><br>
+    function handleNoteEditing(index) {
+      const noteTextElem = document.getElementById('note-text');
+      noteTextElem.value = notes[index];
+      selectedNoteIndex = index;
+      noteTextElem.focus();
+    }
 
-            <button type="submit">Submit</button>
-        </form>
+    function handleNoteClearing() {
+      document.getElementById('note-text').value = '';
+      selectedNoteIndex = null;
+    }
 
-    </div>
+    function handleNoteSaving() {
+      const noteText = document.getElementById('note-text').value.trim();
+      if (!noteText) {
+        alert('Cannot save an empty note.');
+        return;
+      }
+      if (selectedNoteIndex !== null) {
+        notes[selectedNoteIndex] = noteText;
+      } else {
+        notes.push(noteText);
+        selectedNoteIndex = notes.length - 1;
+      }
+      renderNotepadUI();
+      alert('Note saved.');
+    }
 
-    
-  </body>
-  </html>
+    document.getElementById('new-note-btn').addEventListener('click', handleNewNoteCreation);
+    document.getElementById('clear-note-btn').addEventListener('click', handleNoteClearing);
+    document.getElementById('save-note-btn').addEventListener('click', handleNoteSaving);
+
+    // Initial render
+    renderNotepadUI();
+  </script>
+
+</body>
+</html>
