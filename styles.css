@@ -135,3 +135,50 @@ button{
 button:hover{
     background-color: #bab525;
 }
+
+/* Notepad UI component styles */
+.notepad-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.notepad-textarea {
+    width: 100%;
+    height: 300px;
+    resize: vertical;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+}
+
+.notepad-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.notepad-buttons button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.notepad-buttons button:hover {
+    background-color: #0056b3;
+}
